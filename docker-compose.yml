@@ -18,7 +18,7 @@ services:
     container_name : glpi
     hostname: glpi
     ports:
-      - "80:80"
+      - "86:80"
     volumes:
       - /var/www/html/glpi/:/var/www/html/glpi
     environment:
