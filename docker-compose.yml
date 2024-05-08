@@ -4,8 +4,8 @@ services:
 #MariaDB Container
   mariadb:
     image: mariadb:10.7
-    container_name: mariadb
-    hostname: mariadb
+    container_name: glpi_db
+    hostname: glpi_db
     volumes:
       - /var/lib/mysql:/var/lib/mysql
     env_file:
@@ -15,8 +15,8 @@ services:
 #GLPI Container
   glpi:
     image: diouxx/glpi
-    container_name : glpi
-    hostname: glpi
+    container_name : glpi_data
+    hostname: glpi_data
     ports:
       - "86:80"
     volumes:
