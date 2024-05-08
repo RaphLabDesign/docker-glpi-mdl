@@ -1,14 +1,10 @@
 version: '3.4'
 services:
   glpi:
-    ports:
-      - 86:80
     volumes:
       - glpi_data:/var/www/html/glpi
     restart: unless-stopped
   mariadb:
-    ports:
-      - 3300:3306
     volumes:
       - glpi_db:/var/lib/mysql
     restart: unless-stopped
