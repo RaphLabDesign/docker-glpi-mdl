@@ -22,5 +22,5 @@ services:
     volumes:
       - /var/www/html/glpi/:/var/www/html/glpi
     environment:
-      - TIMEZONE=Europe/Brussels
+      - TIMEZONE=America/Toronto
     restart: always
