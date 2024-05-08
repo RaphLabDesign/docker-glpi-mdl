@@ -1,1 +1,27 @@
+version: '3.4'
+services:
+  glpi:
+    ports:
+      - 86:80
+    volumes:
+      - glpi_data:/var/www/html/glpi
+    restart: unless-stopped
+  mariadb:
+    ports:
+      - 3300:3306
+    volumes:
+      - glpi_db:/var/lib/mysql
+    restart: unless-stopped
 
+volumes:
+  glpi_data:
+    external:
+      name: glpi_data
+  glpi_db:
+    external:
+      name: glpi_db
+
+networks:
+  bridge:
+    external:
+      name: bridge
